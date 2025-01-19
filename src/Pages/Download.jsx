@@ -71,8 +71,8 @@ const Download = () => {
   };
 
   return (
-    <section className=" bg-white rounded shadow-lg max-w-[449px] h-[188px] mx-auto ms-6">
-     <div className="px-5 py-4">
+    <section className=" bg-white rounded shadow-lg min-w-[449px] h-[188px] mx-auto ms-6 ">
+     <div className="px-2 py-2 max-w-[407px] h-[153px] mx-auto">
      <h2 className="text-sm font-semibold text-[#121212]">Your Resources</h2>
       <div>
         {fileList.map((file) => (
@@ -81,39 +81,35 @@ const Download = () => {
             className="flex flex-col  "
           >
             {/* File Info */}
-            <div className="flex items-center justify-between ">
-              <div className="flex items-center space-x-2">
-                <div
-                  className="flex"
-                >
-                  <img src={file.img} alt="" />
-                </div>
+            <div className="flex justify-between items-center">
+              <div className="flex items-center space-x-2">  
+                  <img className="w-[21px] h-[27px]" src={file.img} alt="" />
                 <div>
-                  <p className="font-medium">{file.name}</p>
+                  <p className="text-[7px]">{file.name}</p>
                   {file.description && (
-                    <p className="text-sm text-gray-500">{file.description}</p>
+                    <p className="text-[6px] text-gray-500">{file.description}</p>
                   )}
                 </div>
               </div>
               {/* File Size and Action */}
-              <div className="text-right">
-                <p className="text-gray-500">{file.size}</p>
+              <div className="flex items-center gap-20 ">
+                <p className="text-[#121212] text-[6px]">{file.size}</p>
                 {file.status === "downloading" && (
                   <button
-                    className="text-red-500 text-sm font-medium"
+                    className="text-[#121212] hover:text-primary text-[8px] font-medium"
                     onClick={() => cancelDownload(file.id)}
                   >
                     Cancel
                   </button>
                 )}
                 {file.status === "completed" && (
-                  <button className="text-orange-500 text-sm font-medium">
+                  <button className="text-orange-500 text-[8px] font-medium">
                     Download
                   </button>
                 )}
                 {file.status === "canceled" && (
                   <button
-                    className="text-green-500 text-sm font-medium"
+                    className="text-primary hover:text-green-500 duration-300 text-[8px] font-medium"
                     onClick={() => startDownload(file.id)}
                   >
                     Download
@@ -123,13 +119,20 @@ const Download = () => {
             </div>
 
             {/* Progress Bar */}
-            <div className="w-full">
+            <div className="w-full mt-0.5">
               <LinearProgress
                 variant="determinate"
                 value={file.progress}
-                className="!bg-gray-200 !text-orange-500 h-2 rounded-full"
+                sx={{
+                  height: 3,
+                  borderRadius: "999px",
+                  backgroundColor: "rgba(28, 29, 29, 0.05)",
+                  "& .MuiLinearProgress-bar": {
+                    backgroundColor: "#FF4B00",
+                  },
+                }}
               />
-              <p className="text-sm text-gray-500 mt-1">
+              <p className="text-[5px] text-secondary ">
                 {file.status === "completed"
                   ? "Downloaded"
                   : file.status === "canceled"
@@ -142,8 +145,8 @@ const Download = () => {
       </div>
 
       {/* See More */}
-      <div className="text-center mt-4">
-        <button className="text-orange-500 font-medium">see more</button>
+      <div className="text-center">
+        <button className="text-primary bg-primary/5 w-full h-5 rounded-md hover:bg-primary/15 duration-300 hover:scale-105 text-xs font-medium">see more</button>
       </div>
      </div>
     </section>

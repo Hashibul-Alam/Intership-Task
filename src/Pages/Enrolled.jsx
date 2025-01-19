@@ -5,7 +5,7 @@ const EnrolledCard = ({ course }) => {
   const { name, completedClass, totalClass, icon } = course;
 
   return (
-    <div className="w-auto lg:max-w-[257px] h-auto lg:h-[188px] p-4 bg-white shadow-cardShadow rounded-lg border border-[#E4E4E4]">
+    <div className="w-auto lg:min-w-[257px] h-auto lg:h-[188px] p-4 bg-white shadow-cardShadow rounded-lg border border-[#E4E4E4]">
       <h2 className="text-[15px] font-medium text-secondary pb-[14px]">
         Recent enrolled course
       </h2>
