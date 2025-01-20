@@ -71,8 +71,8 @@ const Download = () => {
   };
 
   return (
-    <section className=" bg-white rounded shadow-lg min-w-[449px] h-[188px] mx-auto ms-6 ">
-     <div className="px-2 py-2 max-w-[407px] h-[153px] mx-auto">
+    <section className=" bg-white rounded shadow-lg min-w-[449px] h-[188px]  ms-6 ">
+     <div className="px-5 py-2 max-w-[407px] h-[153px] mx-auto">
      <h2 className="text-sm font-semibold text-[#121212]">Your Resources</h2>
       <div>
         {fileList.map((file) => (
@@ -82,7 +82,7 @@ const Download = () => {
           >
             {/* File Info */}
             <div className="flex justify-between items-center">
-              <div className="flex items-center space-x-2">  
+              <div className="flex items-center space-x-2 py-[1px]">  
                   <img className="w-[21px] h-[27px]" src={file.img} alt="" />
                 <div>
                   <p className="text-[7px]">{file.name}</p>
@@ -143,8 +143,6 @@ const Download = () => {
           </div>
         ))}
       </div>
-
-      {/* See More */}
       <div className="text-center">
         <button className="text-primary bg-primary/5 w-full h-5 rounded-md hover:bg-primary/15 duration-300 hover:scale-105 text-xs font-medium">see more</button>
       </div>
