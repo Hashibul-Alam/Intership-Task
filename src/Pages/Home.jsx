@@ -4,6 +4,8 @@ import ProductIcon from "../../public/Product.png";
 import Download from "./Download";
 import Calendar from "./Calendar";
 import Chart from "./Chart";
+import TodoList from "./TodoList";
+import Upcoming from "./Upcoming";
 
 
 
@@ -28,7 +30,13 @@ const Home = () => {
         <Download/>
         <Calendar/>
       </div>
-      <Chart/>
+     <div className="flex font-Inter">
+     <Chart/>
+     <TodoList/>
+     </div>
+     <div>
+      <Upcoming/>
+     </div>
     </section>
   );
 };

@@ -1,8 +1,11 @@
 import React from 'react'
+import NotesApp from './Note'
 
 const Assignments = () => {
   return (
-    <div>Assignments</div>
+    <div>
+      <NotesApp/>
+    </div>
   )
 }
 
