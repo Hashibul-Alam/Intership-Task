@@ -89,26 +89,26 @@ const AssignmentTable = () => {
   });
 
   return (
-    <section className="h-[955px]">
-      <div className="p-6 px-8">
-        <div className="flex justify-between items-center mb-8">
-          <div>
-            <h1 className="text-[30px] text-[#211C37] font-bold">
+    <section className="lg:h-[955px]">
+      <div className="lg:p-6 lg:px-8">
+        <div className="flex flex-col lg:flex-row justify-between items-center mb-8">
+          <div className=" text-center lg:text-start">
+            <h1 className=" text-[30px] text-[#211C37] font-bold">
               Assignments
             </h1>
-            <p className="text-xl text-[#85878D]">
+            <p className=" text-xl text-[#85878D]">
               View and manage your course assignments
             </p>
           </div>
-          <div className="flex items-center">
+          <div className="flex  items-center">
             <div className="border border-[#E7EAE9] px-[8px] py-1.5 mr-3 rounded-xl">
               <img src="Search.png" alt="" />
             </div>
             <span className="text-[#85878D]">Filter by: </span>
-            <div className="flex items-center gap-2">
+            <div className="flex  items-center gap-2">
               <button
                 onClick={() => handleFilter("Pending")}
-                className="flex flex-col items-center"
+                className="flex  items-center"
               >
                 <span className="text-primary hover:scale-105 ms-1">Date</span>
               </button>
@@ -121,7 +121,7 @@ const AssignmentTable = () => {
         </div>
 
         <div className="space-y-3 lg:max-h-[411px]">
-          <div className="flex items-center justify-between font-bold py-4 lg:px-8 border border-gray-300">
+          <div className=" flex flex-col lg:flex-row items-center justify-between text-xs lg:text-base font-bold py-4 lg:px-8 border border-gray-300">
             <p>Assignment Title</p>
             <p>Course/Lessons</p>
             <p className="lg:pr-14">Due Date</p>
@@ -132,7 +132,7 @@ const AssignmentTable = () => {
             {filteredAssignments.map((assignment) => (
               <li
                 key={assignment.id}
-                className="flex text-nowrap items-center justify-between p-4 border border-gray-300 rounded-lg"
+                className="flex flex-col lg:flex-row   text-nowrap items-center justify-between p-4 border border-gray-300 rounded-lg"
               >
                 <div className="flex-1 text-black text-sm">
                   {assignment.title}
@@ -191,7 +191,7 @@ const AssignmentTable = () => {
           </ul>
         </div>
       </div>
-      <div className="mt-36 flex items-center ms-9">
+      <div className="lg:mt-36 mt-6 flex flex-col lg:flex-row items-center lg:ms-9">
         <div className="flex gap-2 text-xs font-medium">
           <button>Show</button>
           <button className="border px-1 py-1">
@@ -204,7 +204,7 @@ const AssignmentTable = () => {
           </button>
           <button>Row</button>
         </div>
-        <div className="flex items-center justify-center md:ms-52">
+        <div className="flex items-center mt-5 justify-center md:ms-52">
           <Stack spacing={2}>
             <Pagination
               count={10}

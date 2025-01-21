@@ -18,7 +18,7 @@ const Home = () => {
   };
 
   return (
-    <section className="w-auto lg:max-w-[1097px] h-auto lg:h-[955px] ">
+    <section className=" lg:max-w-[1097px] h-auto lg:h-[955px]">
       <h1 className="text-[33px] font-bold leading-[41px] text-center lg:text-left lg:ms-[30px] mt-[22px]">
         Hello Harsh 👋🏻
       </h1>
