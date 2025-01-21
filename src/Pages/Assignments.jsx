@@ -1,10 +1,10 @@
 import React from 'react'
-import NotesApp from './Note'
+import AssignmentTable from './AssignmentPage'
 
 const Assignments = () => {
   return (
     <div>
-      <NotesApp/>
+    <AssignmentTable/>
     </div>
   )
 }
