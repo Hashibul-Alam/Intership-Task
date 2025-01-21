@@ -18,7 +18,7 @@ const TodoList = () => {
   };
 
   return (
-    <div className="min-w-[288px] mt-4 bg-white shadow-cardShadow rounded-md border border-[#E2E8F0] ms-7">
+    <div className="min-w-[288px] mt-4 bg-white shadow-cardShadow rounded-md border border-[#E2E8F0] lg:ms-7">
       <h1 className="text-[15px] font-semibold leading-[23px] pt-[11px] ps-[28px]">To do List</h1>
       <ul className="space-y-2 pb-6">
         {tasks.map((task) => (

@@ -12,7 +12,7 @@ const Header = () => {
         <header className="flex items-center justify-between px-6 py-3 bg-white border-b">
     
       {/* Search Bar */}
-      <div className="flex md:w-[334px] md:h-[38px] items-center border-2 border-primary hover:border-green-500 duration-300 rounded-[4px] px-3 py-1">
+      <div className="hidden md:flex md:w-[334px] md:h-[38px] items-center border-2 border-primary hover:border-green-500 duration-300 rounded-[4px] px-3 py-1">
         <CiSearch className="text-primary mr-1 size-[18px] "/>
         <input
           type="text"

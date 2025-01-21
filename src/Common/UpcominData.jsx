@@ -4,7 +4,7 @@ const UpcomingData = ({heading, all, data}) => {
   
 
   return (
-    <section className="max-w-[525px] h-auto rounded-lg bg-neutral-50/70 border border-[#E2E8F0] shadow-cardShadow ms-7 pb-[22px]">
+    <section className="max-w-[525px] h-auto rounded-lg bg-neutral-50/70 border border-[#E2E8F0] shadow-cardShadow lg:ms-7 pb-[22px]">
       <div className="flex justify-between items-center mt-6 ps-[29px] ">
         <h1 className="text-[19px] text-secondary font-medium opacity-80 leading-[22px] ">{heading} </h1>
         <div className="flex items-center pr-5 gap-4">

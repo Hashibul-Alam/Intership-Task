@@ -43,7 +43,7 @@ const Upcoming = () => {
       ];
   return (
     <section className='w-full h-[314px] mt-5'>
-            <div className='flex'>
+            <div className='flex flex-col lg:flex-row'>
             <CardUpcomming data={dataUpcoming}  heading='Recent enrolled classes' all="All"   />
             <UpcomingData heading='Recent enrolled classes' data={Upcomingdatas} />
             </div>

@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-
-// icons
 import Note from "/NoteBlank.png";
 import Download from "/Download.png";
 import UserGroup from "/classs.png";
@@ -13,6 +11,7 @@ import Calendar from "/calendar.png";
 import DashIcon from "/Dash.png";
 import Assignment from "/assignment.png";
 import { Link } from "react-router-dom";
+
 const Sidebar = () => {
   const Sidebar_Link = [
     { id: 1, path: "/", name: "Dashboard", icon: DashIcon },
@@ -27,38 +26,32 @@ const Sidebar = () => {
     { id: 10, path: "/courses", name: "Courses", icon: Graduation },
     { id: 11, path: "/settings", name: "Settings", icon: Settings },
   ];
+
   const [isActive, setIsActive] = useState(0);
   const toggleActive = (index) => {
     setIsActive(index);
   };
 
   return (
-    <section className="w-16 md:w-[223px] fixed h-auto md:h-[1019px]  left-0 top-0 z-10 bg-[#F9F9F9] border-r pt-[15px] ">
-      {/* //  logo */}
-      <div className="py-[9px] border-b ">
-        <img
-          src="/Logo.svg"
-          alt="Logo"
-          className="w-[137px] h-[29px] mx-auto"
-        />
+    <section className="w-16 md:w-[223px] fixed h-screen md:h-[1019px] left-0 top-0 z-10 bg-[#F9F9F9] border-r pt-[15px] transition-all">
+      <div className="py-[9px] border-b">
+        <img src="/Logo.svg" alt="Logo" className="w-[137px] h-[29px] mx-auto" />
       </div>
-      {/* // Navigation menu */}
-
       <ul className="space-y-2 mt-[17px] px-[9px]">
         {Sidebar_Link.map((item, index) => (
           <li
             key={index}
-            className={`py-[4px] text-[#727272] px-[7px] rounded ${
-              isActive === index ? "bg-primary text-[#FFFFFF]" : ""
-            }`}
+            className={`py-[4px] text-[#727272] px-[7px] rounded flex items-center space-x-[9px] ${isActive === index ? "bg-primary text-[#FFFFFF]" : ""}`}
           >
             <Link
               onClick={() => toggleActive(index)}
               to={item.path}
-              className="flex items-center space-x-[9px] py-[6px] "
+              className="flex items-center w-full"
             >
-              <img src={item.icon} alt="" />
-              <span className="text-[12px] font-medium"> {item.name} </span>
+              <img src={item.icon} alt={item.name} />
+              <span className="hidden md:inline text-[12px] font-medium ml-2">
+                {item.name}
+              </span>
             </Link>
           </li>
         ))}

@@ -51,17 +51,13 @@ const Download = () => {
           }
           return file;
         });
-
-        // Stop updating if the file reaches 100%
         if (updatedFiles.find((file) => file.id === id).progress === 100) {
           clearInterval(interval);
         }
         return updatedFiles;
       });
-    }, 500); // Update every 500ms
+    }, 500); 
   };
-
-  // Function to cancel download
   const cancelDownload = (id) => {
     setFileList((prevFiles) =>
       prevFiles.map((prevData) =>
@@ -71,7 +67,7 @@ const Download = () => {
   };
 
   return (
-    <section className=" bg-white rounded shadow-lg min-w-[449px] h-[188px]  ms-6 ">
+    <section className=" bg-white rounded shadow-lg lg:min-w-[449px]  h-[188px] my-5 lg:my-0 lg:ms-6 ">
      <div className="px-5 py-2 max-w-[407px] h-[153px] mx-auto">
      <h2 className="text-sm font-semibold text-[#121212]">Your Resources</h2>
       <div>

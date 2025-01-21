@@ -5,11 +5,11 @@ const EnrolledCard = ({ course }) => {
   const { name, completedClass, totalClass, icon } = course;
 
   return (
-    <div className="w-auto lg:min-w-[257px] h-auto lg:h-[188px] p-4 bg-white shadow-cardShadow rounded-lg border border-[#E4E4E4]">
+    <div className="w-auto lg:min-w-[257px] my-5 lg:my-0 h-auto lg:h-[188px] p-4 bg-white shadow-cardShadow rounded-lg border border-[#E4E4E4]">
       <h2 className="text-[15px] font-medium text-secondary pb-[14px]">
         Recent enrolled course
       </h2>
-      <div className="  max-w-[216px] h-[117px] ps-[14px] pt-[18px] rounded-lg border border-[#E5E7EB]">
+      <div className=" w-full h-auto lg:max-w-[216px] lg:h-[117px] ps-[14px] pt-[18px] rounded-lg border border-[#E5E7EB]">
         <div>
           <div className="bg-secondary/5 p-[7px] max-w-[27px] rounded-[7px] mb-[11px]">
             <img className="size-[14px]" src={icon} />

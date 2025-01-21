@@ -25,16 +25,16 @@ const Home = () => {
       <p className="text-[#85878D] ms-[30px]">
         Let’s learn something new today!
       </p>
-      <div className="p-6 flex  font-Inter">
+      <div className="md:p-6 flex flex-col lg:flex-row  font-Inter">
         <EnrolledCard course={course} />
         <Download/>
         <Calendar/>
       </div>
-     <div className="flex font-Inter">
+     <div className="flex flex-col mt-5 lg:mt-0 lg:flex-row font-Inter">
      <Chart/>
      <TodoList/>
      </div>
-     <div>
+     <div className="flex ">
       <Upcoming/>
      </div>
     </section>

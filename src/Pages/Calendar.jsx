@@ -6,7 +6,7 @@ import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 
 const CustomCalendar = () => {
   return (
-    <div className="flex justify-center items-center border border-[#E4E4E4] shadow-cardShadow ms-[26px] ">
+    <div className="flex justify-center  items-center border border-[#E4E4E4] shadow-cardShadow  lg:ms-[26px] ">
       <LocalizationProvider dateAdapter={AdapterDayjs}>
         <DateCalendar
           sx={{
