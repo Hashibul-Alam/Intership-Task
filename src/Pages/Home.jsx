@@ -18,11 +18,11 @@ const Home = () => {
   };
 
   return (
-    <section className="w-auto lg:max-w-[1097px] h-auto lg:h-[955px]  ">
-      <h1 className="text-[33px] font-bold leading-[41px] ms-[30px] mt-[22px]">
+    <section className="w-auto lg:max-w-[1097px] h-auto lg:h-[955px] overflow-x-hidden">
+      <h1 className="text-[33px] font-bold leading-[41px] text-center lg:text-left lg:ms-[30px] mt-[22px]">
         Hello Harsh 👋🏻
       </h1>
-      <p className="text-[#85878D] ms-[30px]">
+      <p className="text-[#85878D] text-center lg:text-left lg:ms-[30px]">
         Let’s learn something new today!
       </p>
       <div className="md:p-6 flex flex-col lg:flex-row  font-Inter">
@@ -34,7 +34,7 @@ const Home = () => {
      <Chart/>
      <TodoList/>
      </div>
-     <div className="flex ">
+     <div className="flex flex-col mt-5 lg:mt-0 lg:flex-row font-Inter">
       <Upcoming/>
      </div>
     </section>

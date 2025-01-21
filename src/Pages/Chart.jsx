@@ -109,7 +109,7 @@ const Chart = () => {
   return (
     <div className="w-full lg:max-w-[357px] h-auto bg-white shadow-cardShadow rounded-lg border border-[#E2E8F0] lg:ms-[26px] mt-4">
              <h2 className=" text-[15px] text-black font-semibold ms-5 mt-3  ">Hours Spent</h2>
-     <div className="max-w-[345px] h-auto my-[15px] mx-[21px] px-2 py-4 border border-[#E5E7E7]">
+     <div className="lg:max-w-[345px] h-auto my-[15px] lg:mx-[21px] lg:px-2 py-4 border border-[#E5E7E7]">
      <Bar data={data} options={options} plugins={[horizontalLinePlugin]} />
      </div>
     </div>

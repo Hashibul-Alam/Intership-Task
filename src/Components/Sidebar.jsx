@@ -33,9 +33,9 @@ const Sidebar = () => {
   };
 
   return (
-    <section className="w-16 md:w-[223px] fixed h-screen md:h-[1019px] left-0 top-0 z-10 bg-[#F9F9F9] border-r pt-[15px] transition-all">
+    <section className="w-16 md:w-[223px] fixed h-screen md:h-[1019px] left-0 top-0 z-10 bg-[#F9F9F9] overflow-hidden border-r pt-[15px] transition-all">
       <div className="py-[9px] border-b">
-        <img src="/Logo.svg" alt="Logo" className="w-[137px] h-[29px] mx-auto" />
+        <img src="/Logo.svg" alt="Logo" className="lg:w-[137px] lg:h-[29px] mx-auto" />
       </div>
       <ul className="space-y-2 mt-[17px] px-[9px]">
         {Sidebar_Link.map((item, index) => (

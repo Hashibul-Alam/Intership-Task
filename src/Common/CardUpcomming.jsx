@@ -15,7 +15,7 @@ const CardUpcoming = ({heading, all, data}) => {
 
       {data?.map((item, index) => (
         <div key={index} className="mt-[17px]">
-          <div className="flex items-start gap-4 hover:border-[1.5px] bg-white border-primary  lg:px-5 py-2 rounded-lg lg:ms-7 lg:mr-5">
+          <div className="flex items-start gap-2 lg:gap-4 hover:border-[1.5px] bg-white border-primary px-2 lg:px-5 py-2 rounded-lg lg:ms-7 lg:mr-5">
 
             <img
               className="bg-gray-100 rounded p-2 lg:w-12 lg:h-12"
@@ -23,14 +23,14 @@ const CardUpcoming = ({heading, all, data}) => {
               alt={item.title}
             />
             <div className="flex-1">
-              <h2 className="font-bold text-[15px] hover:text-primary cursor-pointer">
+              <h2 className="font-bold text-xs lg:text-[15px] hover:text-primary cursor-pointer">
                 {item.title}
               </h2>
-              <div className="flex items-center gap-6">
+              <div className="flex items-center lg:gap-6">
                 {item.tags.map((tag) => (
                   <div key={tag.id} className="flex items-center gap-2   py-2">
                     <img src={tag.img} alt={tag.title} className=" cursor-pointer" />
-                    <p className="text-secondary text-[13px]">{tag.title}</p>
+                    <p className="text-secondary text-[8px] lg:text-[13px]">{tag.title}</p>
                   </div>
                 ))}
               </div>
