@@ -68,7 +68,7 @@ const AssignmentTable = () => {
         )
       );
       setUploadingAssignment(null);
-      alert("File uploaded successfully!");
+      
     }
   };
 

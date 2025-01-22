@@ -6,6 +6,7 @@ export default {
   ],
 
 
+
   theme: {
     extend: {
       fontFamily: {
@@ -16,7 +17,8 @@ export default {
         secondary : "#1C1D1D"
       },
       boxShadow:{
-        cardShadow: "0px 4px 6px 0px #00000017"
+        cardShadow: "0px 4px 6px 0px #00000017",
+        upcomiShadow: "0px 0px 39.85px 0px rgba(0, 0, 0, 0.07)"
       }
     },
   },

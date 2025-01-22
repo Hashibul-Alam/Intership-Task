@@ -15,13 +15,14 @@ const CustomCalendar = () => {
             "& .MuiTypography-root": {
               fontSize: "0.55rem", 
               color: "#FF4B00",
-              paddingBottom: "8px",
+              paddingBottom: "5px",
             
             },
             "& .MuiPickersDay-root": {
               width: "20px", 
               height: "16px",
-              fontSize: "0.5rem", 
+              fontSize: "0.5rem",
+              paddingBottom: "5px",
           
               color: "#222222", 
               "&:hover": {
@@ -31,8 +32,10 @@ const CustomCalendar = () => {
             "& .MuiPickersDay-root.Mui-selected": {
               backgroundColor: "#FF4B00", 
               color: "#FFF", 
+              paddingTop: "5px",
               "&:hover": {
                 backgroundColor: "#e64a19", 
+               
               },
             },
           }} />

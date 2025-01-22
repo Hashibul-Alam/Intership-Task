@@ -6,6 +6,8 @@ import Calendar from "./Calendar";
 import Chart from "./Chart";
 import TodoList from "./TodoList";
 import Upcoming from "./Upcoming";
+import Gauge from "./Gauge";
+
 
 
 
@@ -28,10 +30,12 @@ const Home = () => {
       <div className="md:p-6 flex flex-col lg:flex-row  font-Inter">
         <EnrolledCard course={course} />
         <Download/>
+        
         <Calendar/>
       </div>
      <div className="flex flex-col mt-5 lg:mt-0 lg:flex-row font-Inter">
      <Chart/>
+     <Gauge/>
      <TodoList/>
      </div>
      <div className="flex flex-col mt-5 lg:mt-0 lg:flex-row font-Inter">

@@ -65,9 +65,9 @@ const NotesApp = () => {
   };
 
   return (
-    <div className="px-6 pb-6">
+    <div className="px-2 lg:px-6 pb-6">
 
-     <div className='flex justify-between border mb-7 px-3 items-center'>
+     <div className='flex flex-col justify-between border mb-7 px-3 items-center'>
       <h2 className='text-2xl font-medium text-primary '>Notes</h2>
 
       <div className="flex items-center gap-4 my-3">
