@@ -68,7 +68,6 @@ const AssignmentTable = () => {
         )
       );
       setUploadingAssignment(null);
-      
     }
   };
 

@@ -1,12 +1,12 @@
 import React from "react";
 
-const UpcomingData = ({heading,  data}) => {
-  
-
+const UpcomingData = ({ heading, data }) => {
   return (
     <section className="max-w-[525px] h-auto rounded-lg  border border-[#E2E8F0] shadow-cardShadow lg:ms-7 pb-[22px]">
       <div className="flex justify-between items-center mt-6 ps-[29px] ">
-        <h1 className="text-[19px] text-secondary font-medium opacity-80 leading-[22px] ">{heading} </h1>
+        <h1 className="text-[19px] text-secondary font-medium opacity-80 leading-[22px] ">
+          {heading}{" "}
+        </h1>
       </div>
 
       {data?.map((item, index) => (
@@ -22,10 +22,13 @@ const UpcomingData = ({heading,  data}) => {
                 {item.title}
               </h2>
               <div className="flex  items-center gap-6">
-              <p className="text-xs"> {item.time}</p>
+                <p className="text-xs"> {item.time}</p>
               </div>
             </div>
-            <button className="lg:min-w-[62px] min-h-[27px] bg-primary/5 hover:bg-primary rounded-md text-primary font-medium hover:text-white text-center lg:ms-10 my-3"> {item.button}</button>
+            <button className="lg:min-w-[62px] min-h-[27px] bg-primary/5 hover:bg-primary rounded-md text-primary font-medium hover:text-white text-center lg:ms-10 my-3">
+              {" "}
+              {item.button}
+            </button>
           </div>
         </div>
       ))}

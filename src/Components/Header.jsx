@@ -8,7 +8,7 @@ import { IoChevronDownOutline } from "react-icons/io5";
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isLoggedOut, setIsLoggedOut] = useState(false);
-  const [showLoginForm, setShowLoginForm] = useState(false); 
+  const [showLoginForm, setShowLoginForm] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen((prev) => !prev);
@@ -16,17 +16,16 @@ const Header = () => {
 
   const handleLogout = () => {
     setIsLoggedOut(true);
-    setIsMenuOpen(false); 
+    setIsMenuOpen(false);
   };
 
   const handleCreateAccount = () => {
-    setShowLoginForm(true); 
+    setShowLoginForm(true);
   };
 
   return (
     <div>
       <header className="flex items-center justify-between px-6 py-3 bg-white border-b">
-        
         <div className="hidden md:flex md:w-[334px] md:h-[38px] items-center border-2 border-primary hover:border-green-500 duration-300 rounded-[4px] px-3 py-1">
           <CiSearch className="text-primary mr-1 size-[18px]" />
           <input
@@ -42,9 +41,7 @@ const Header = () => {
           </span>
         </div>
 
-      
         <div className="flex items-center space-x-5">
-          
           {!isLoggedOut && (
             <button className="border border-[#E7EAE9] size-[32px] rounded">
               <Box sx={{ color: "action.active" }}>
@@ -55,7 +52,6 @@ const Header = () => {
             </button>
           )}
 
-        
           <div className="relative">
             {!isLoggedOut ? (
               <div
@@ -74,13 +70,12 @@ const Header = () => {
             ) : (
               <p
                 className="text-[13px] font-medium flex items-center gap-2 cursor-pointer hover:scale-105 duration-150"
-                onClick={handleCreateAccount} 
+                onClick={handleCreateAccount}
               >
                 Create Account
               </p>
             )}
 
-          
             {isMenuOpen && !isLoggedOut && (
               <div className="absolute right-0 mt-2 w-48 bg-white shadow-lg rounded-md z-10">
                 <ul className="py-2">
@@ -103,7 +98,6 @@ const Header = () => {
         </div>
       </header>
 
-      
       {showLoginForm && (
         <div className="fixed inset-0 flex justify-center items-center bg-gray-800/35 z-50">
           <div className="bg-white p-6 rounded-md shadow-lg w-96">
@@ -118,7 +112,9 @@ const Header = () => {
                 />
               </div>
               <div className="mb-4">
-                <label className="block text-sm font-medium mb-1">Password</label>
+                <label className="block text-sm font-medium mb-1">
+                  Password
+                </label>
                 <input
                   type="password"
                   className="w-full border border-gray-300 rounded px-4 py-2"
@@ -134,7 +130,7 @@ const Header = () => {
                 </button>
                 <button
                   type="button"
-                  onClick={() => setShowLoginForm(false)} 
+                  onClick={() => setShowLoginForm(false)}
                   className="text-sm text-gray-500"
                 >
                   Cancel

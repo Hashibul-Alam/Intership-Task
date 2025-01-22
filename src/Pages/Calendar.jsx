@@ -3,7 +3,6 @@ import { DateCalendar } from "@mui/x-date-pickers/DateCalendar";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 
-
 const CustomCalendar = () => {
   return (
     <div className="flex justify-center  items-center border border-[#E4E4E4] shadow-cardShadow  lg:ms-[26px] ">
@@ -13,32 +12,31 @@ const CustomCalendar = () => {
             width: "208px",
             height: "188px",
             "& .MuiTypography-root": {
-              fontSize: "0.55rem", 
+              fontSize: "0.55rem",
               color: "#FF4B00",
               paddingBottom: "5px",
-            
             },
             "& .MuiPickersDay-root": {
-              width: "20px", 
+              width: "20px",
               height: "16px",
               fontSize: "0.5rem",
               paddingBottom: "5px",
-          
-              color: "#222222", 
+
+              color: "#222222",
               "&:hover": {
-                backgroundColor: "#FF4B00", 
+                backgroundColor: "#FF4B00",
               },
             },
             "& .MuiPickersDay-root.Mui-selected": {
-              backgroundColor: "#FF4B00", 
-              color: "#FFF", 
+              backgroundColor: "#FF4B00",
+              color: "#FFF",
               paddingTop: "5px",
               "&:hover": {
-                backgroundColor: "#e64a19", 
-               
+                backgroundColor: "#e64a19",
               },
             },
-          }} />
+          }}
+        />
       </LocalizationProvider>
     </div>
   );

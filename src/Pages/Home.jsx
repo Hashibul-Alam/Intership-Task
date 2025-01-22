@@ -7,9 +7,6 @@ import TodoList from "./TodoList";
 import Upcoming from "./Upcoming";
 import Gauge from "./Gauge";
 
-
-
-
 const Home = () => {
   const course = {
     name: "Product Design Course",
@@ -28,17 +25,17 @@ const Home = () => {
       </p>
       <div className="md:p-6 flex flex-col lg:flex-row  font-Inter">
         <EnrolledCard course={course} />
-        <Download/>
-        <Calendar/>
+        <Download />
+        <Calendar />
       </div>
-     <div className="flex flex-col mt-5 lg:mt-0 lg:flex-row font-Inter">
-     <Chart/>
-     <Gauge/>
-     <TodoList/>
-     </div>
-     <div className="flex flex-col mt-5 lg:mt-0 lg:flex-row font-Inter">
-      <Upcoming/>
-     </div>
+      <div className="flex flex-col mt-5 lg:mt-0 lg:flex-row font-Inter">
+        <Chart />
+        <Gauge />
+        <TodoList />
+      </div>
+      <div className="flex flex-col mt-5 lg:mt-0 lg:flex-row font-Inter">
+        <Upcoming />
+      </div>
     </section>
   );
 };
