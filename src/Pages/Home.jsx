@@ -1,6 +1,5 @@
 import React from "react";
 import EnrolledCard from "./Enrolled";
-import ProductIcon from "../../public/Product.png";
 import Download from "./Download";
 import Calendar from "./Calendar";
 import Chart from "./Chart";
@@ -16,7 +15,7 @@ const Home = () => {
     name: "Product Design Course",
     completedClass: 14,
     totalClass: 30,
-    icon: ProductIcon,
+    icon: "/Product.png",
   };
 
   return (

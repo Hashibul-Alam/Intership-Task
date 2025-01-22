@@ -3,6 +3,7 @@ import { MenuItem, Select, InputAdornment } from '@mui/material';
 import { Add } from '@mui/icons-material';
 import { BsFunnel } from "react-icons/bs";
 import FilterListIcon from '@mui/icons-material/FilterList';
+import DocumentCard from './Docum';
 
 const initialNotes = [
   { id: 1, title: 'Product Team Meeting', date: '2023-03-05', img: '/note2.png',  user: 'Floyd Miles' ,category: "Monthly", des: `This monthly progress agenda is following this items: 
@@ -20,17 +21,24 @@ const initialNotes = [
   { id: 5, title: 'Document Images', date: '2023-12-30', img: '/note2.png',  user: 'Cameron Williamson',category: "Monthly",
     type: "Product", des: `This monthly progress agenda is following this items: 
     `, des2: "* Introduction to Newest Product Plan", des3: "* Monthly Revenue updates for each products"  },
-
   { id: 6, title: 'Document Images', date: '2023-12-30', img: '/note2.png',  user: 'Cameron Williamson',category: "Monthly",
-    type: "Product", des: `Report Document of Weekly Meetings`,  },
+    type: "Product", des: `This monthly progress agenda is following this items: 
+    `, des2: "* Introduction to Newest Product Plan", des3: "* Monthly Revenue updates for each products"  },
 
-  { id: 7, title: 'Document Images', date: '2023-12-30', img: '/note2.png', user: 'Cameron Williamson',category: "Monthly",
+
+  { id: 7, title: 'Document Images', date: '2023-12-30', img: '/note2.png', img2:"/Note.png", user: 'Cameron Williamson',category: "Monthly",
+    type: "Product", des: `This monthly progress agenda is following this items: 
+    `  },
+  { id: 8, title: 'Document Images', date: '2023-12-30', img: '/note2.png', img2:"/Note.png", user: 'Cameron Williamson',category: "Monthly",
+    type: "Product", des: `This monthly progress agenda is following this items: 
+    `  },
+  { id: 9, title: 'Document Images', date: '2023-12-30', img: '/note2.png', img2:"/Note.png", user: 'Cameron Williamson',category: "Monthly",
+    type: "Product", des: `This monthly progress agenda is following this items: 
+    `  },
+  { id: 10, title: 'Document Images', date: '2023-12-30', img: '/note2.png', user: 'Cameron Williamson',category: "Monthly",
     type: "Product", des: `This monthly progress agenda is following this items: 
     `, des2: "* Introduction to Newest Product Plan", des3: "* Monthly Revenue updates for each products"  },
-  { id: 8, title: 'Document Images', date: '2023-12-30', img: '/note2.png', user: 'Cameron Williamson',category: "Monthly",
-    type: "Product", des: `This monthly progress agenda is following this items: 
-    `, des2: "* Introduction to Newest Product Plan", des3: "* Monthly Revenue updates for each products"  },
-  { id: 9, title: 'Document Images', date: '2023-12-30', img: '/note2.png', user: 'Cameron Williamson',category: "Monthly",
+  { id: 11, title: 'Document Images', date: '2023-12-30', img: '/note2.png', user: 'Cameron Williamson',category: "Monthly",
     type: "Product", des: `This monthly progress agenda is following this items: 
     `, des2: "* Introduction to Newest Product Plan", des3: "* Monthly Revenue updates for each products"  },
 ];
@@ -119,22 +127,23 @@ const NotesApp = () => {
       </div>
      </div>
 
-      {/* Notes Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 ">
         {filteredNotes.map(note => (
-          <div key={note.id} className="border border-[#E4E4E4] rounded-lg shadow-sm  max-w-[319px] h-[203px] ">
+          <div key={note.id} className="border border-[#E4E4E4] rounded-lg shadow-sm  max-w-[319px] min-h-[203px] ">
            <div className='ps-[22px] mr-4 mt-4'>
            <div className='flex items-center gap-[11px] '>
            <button className='bg-[#F7F7E8] px-[5px] py-[3px] rounded text-[#B1AB1D] font-medium'> { note.category } </button>
            <button className='bg-[#EDF2FE] px-[5px] py-[3px] rounded text-[#3083FF] font-medium'> { note.type } </button>
            </div>
-            <div className=' '>
-            <h3 className="text-[14px] py-[10px] font-semibold  relative">{note.title}</h3>
+            <div className=''>
+            <h3 className="text-[14px] py-[10px] font-semibold relative">{note.title}</h3>
             <p className='text-[12px] pr-5 leading-[18px] text-[#727272] '>{note.des} <br/>
               <span > {note.des2} </span> <br/>
               <span> {note.des3} </span>
             </p>
-            {note.img2 && <img className=' ' src={note.img2} alt={note.title} />}
+            <div className="relative">
+            {note.img2 && <img className='w-full h-16 object-cover' src={note.img2} alt={note.title} />}
+      </div>
             </div>
            </div>
            <div className="flex items-center justify-between border-t pt-2">
@@ -146,7 +155,7 @@ const NotesApp = () => {
             </div>
           </div>
         ))}
-      </div>      
+      </div>    
     </div>
     
   );

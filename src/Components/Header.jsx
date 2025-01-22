@@ -8,7 +8,7 @@ import { IoChevronDownOutline } from "react-icons/io5";
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isLoggedOut, setIsLoggedOut] = useState(false);
-  const [showLoginForm, setShowLoginForm] = useState(false); // New state for showing login form
+  const [showLoginForm, setShowLoginForm] = useState(false); 
 
   const toggleMenu = () => {
     setIsMenuOpen((prev) => !prev);
@@ -16,11 +16,11 @@ const Header = () => {
 
   const handleLogout = () => {
     setIsLoggedOut(true);
-    setIsMenuOpen(false); // Close the menu after logout
+    setIsMenuOpen(false); 
   };
 
   const handleCreateAccount = () => {
-    setShowLoginForm(true); // Show login form when Create Account is clicked
+    setShowLoginForm(true); 
   };
 
   return (
