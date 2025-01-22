@@ -30,7 +30,6 @@ const Home = () => {
       <div className="md:p-6 flex flex-col lg:flex-row  font-Inter">
         <EnrolledCard course={course} />
         <Download/>
-        
         <Calendar/>
       </div>
      <div className="flex flex-col mt-5 lg:mt-0 lg:flex-row font-Inter">

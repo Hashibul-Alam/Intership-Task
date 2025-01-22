@@ -67,10 +67,10 @@ const NotesApp = () => {
   return (
     <div className="px-2 lg:px-6 pb-6">
 
-     <div className='flex flex-col justify-between border mb-7 px-3 items-center'>
+     <div className='flex flex-col lg:flex-row justify-between border mb-7 px-3 items-center'>
       <h2 className='text-2xl font-medium text-primary '>Notes</h2>
 
-      <div className="flex items-center gap-4 my-3">
+      <div className="flex flex-col lg:flex-row items-center gap-4 my-3">
         <Select className='border border-primary'
           value= {filter}
           onChange={(e) => setFilter(e.target.value)}
@@ -113,8 +113,8 @@ const NotesApp = () => {
           <MenuItem value="date">Sort by Date</MenuItem>
           <MenuItem value="title">Sort by Title</MenuItem>
         </Select>
-        <button className='bg-primary py-1.5 px-3 rounded text-white'  onClick={handleAddNote}>
-         <Add className='text-[14px]' /> Add Note
+        <button className='bg-primary text-xs lg:text-base py-1.5 px-3 rounded text-white'  onClick={handleAddNote}>
+         <Add className='text-xs lg:text-[14px]' /> Add Note
         </button>
       </div>
      </div>

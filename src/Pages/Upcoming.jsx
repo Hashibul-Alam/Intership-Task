@@ -42,7 +42,7 @@ const Upcoming = () => {
        
       ];
   return (
-    <section className='w-full max-w-[1000px] h-[314px] mt-5'>
+    <section className='w-full lg:max-w-[1000px] h-[314px] mt-5'>
             <div className='flex flex-col lg:flex-row'>
             <CardUpcomming data={dataUpcoming}  heading='Recent enrolled classes' all="All"   />
             <UpcomingData heading='Upcoming Lesson' data={Upcomingdatas} />

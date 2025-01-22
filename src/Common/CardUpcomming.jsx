@@ -28,7 +28,7 @@ const CardUpcoming = ({heading, all, data}) => {
               </h2>
               <div className="flex items-center lg:gap-6">
                 {item.tags.map((tag) => (
-                  <div key={tag.id} className="flex items-center gap-2   py-2">
+                  <div key={tag.id} className="flex items-center gap-2 py-2">
                     <img src={tag.img} alt={tag.title} className=" cursor-pointer" />
                     <p className="text-secondary text-[8px] lg:text-[13px]">{tag.title}</p>
                   </div>
